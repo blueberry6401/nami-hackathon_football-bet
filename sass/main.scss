@@ -2,7 +2,7 @@
 
 
 $color-main: #ffc107;
-$bet-width: 500px;
+$bet-width: 800px;
 
 @import "_segmented_control";
 // Vendors and external stylesheets
@@ -24,22 +24,43 @@ $bet-width: 500px;
   }
 }
 
-.match {
-  margin-top: 30px; margin-bottom: 30px;
+.match-container {
+  .match {
+    margin-top: 30px;
+    margin-bottom: 30px;
 
-  .end-in {
-    font-size: 19px;
-    margin-right: 15px;
-  }
-  .count-down {
-    font-size: 90px;
-  }
+    .end-in {
+      font-size: 19px;
+      margin-right: 15px;
+    }
+    .count-down {
+      font-size: 90px;
+    }
 
-  .input-bet-container {
-    width: $bet-width;
+    .input-bet-container {
+      width: $bet-width;
+    }
   }
 }
 
+.match-list {
+  overflow-y: scroll;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
 
+  .match {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
 
+    * {
+      cursor: default;
+    }
 
+    &.selected {
+      background: #ffe9a4;
+    }
+  }
+}

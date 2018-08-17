@@ -1,0 +1,336 @@
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "BETTokenAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "timeOneMatch",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "currentMatch",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_id_match",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_id_match",
+        "type": "uint256"
+      },
+      {
+        "name": "_id_team_win",
+        "type": "uint256"
+      }
+    ],
+    "name": "submitResult",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "userBet",
+    "outputs": [
+      {
+        "name": "valueBet",
+        "type": "uint256"
+      },
+      {
+        "name": "isBet",
+        "type": "bool"
+      },
+      {
+        "name": "id_team_bet",
+        "type": "uint256"
+      },
+      {
+        "name": "isWithdrawn",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_from",
+        "type": "address"
+      },
+      {
+        "name": "_value",
+        "type": "uint256"
+      },
+      {
+        "name": "_id_team",
+        "type": "uint256"
+      },
+      {
+        "name": "_id_match",
+        "type": "uint256"
+      }
+    ],
+    "name": "bet",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_id_match",
+        "type": "uint256"
+      },
+      {
+        "name": "_id_team_a",
+        "type": "uint256"
+      },
+      {
+        "name": "_id_team_b",
+        "type": "uint256"
+      },
+      {
+        "name": "_time_end",
+        "type": "uint256"
+      }
+    ],
+    "name": "openMatch",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "listMatch",
+    "outputs": [
+      {
+        "name": "id_team_a",
+        "type": "uint256"
+      },
+      {
+        "name": "id_team_b",
+        "type": "uint256"
+      },
+      {
+        "name": "time_end",
+        "type": "uint256"
+      },
+      {
+        "name": "result",
+        "type": "uint256"
+      },
+      {
+        "name": "totalBetting",
+        "type": "uint256"
+      },
+      {
+        "name": "totalBetTeamA",
+        "type": "uint256"
+      },
+      {
+        "name": "totalBetTeamB",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_timeOneMatch",
+        "type": "uint256"
+      }
+    ],
+    "name": "changeTimeOneMatch",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "MasterAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_masterAddress",
+        "type": "address"
+      }
+    ],
+    "name": "changeMaster",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "nameOfTeam",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_BETTokenAddress",
+        "type": "address"
+      },
+      {
+        "name": "_timeOneMatch",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "id_match",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "timeBetting",
+        "type": "uint256"
+      }
+    ],
+    "name": "BET",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "id_match",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "timeWithdraw",
+        "type": "uint256"
+      }
+    ],
+    "name": "Withdraw",
+    "type": "event"
+  }
+]
