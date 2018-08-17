@@ -13,6 +13,11 @@ class App extends Component {
     }
 
     async componentDidMount() {
+        this.updateMatches(true)
+        setInterval(() => this.updateMatches(), 5000)
+    }
+
+    async updateMatches(updateSelected = false) {
         const [matchCount, timeOneMatch] = await Promise.all([
             callSc('currentMatch'),
             callSc('timeOneMatch')
@@ -30,6 +35,7 @@ class App extends Component {
                     idTeam1: listMatch[0].toNumber(),
                     idTeam2: listMatch[1].toNumber(),
                     startTime: listMatch[2].toNumber() * 1000 - timeOneMatch * 1000,
+                    hasResult: listMatch[3].toNumber() !== 0
                 })
 
                 const [name1, name2] = await Promise.all([
@@ -50,9 +56,14 @@ class App extends Component {
         matches.sort((x, y) => y.startTime - x.startTime)
 
         console.log('matches', matches)
+
+        let selectedMatchId
+        if (!updateSelected) selectedMatchId = this.state.selectedMatchId
+        else if (matches.length) selectedMatchId = matches[matches.length - 1].matchId
+        else selectedMatchId = null
         this.setState({
             matches,
-            selectedMatchId: 1,
+            selectedMatchId,
         })
     }
 
@@ -73,6 +84,8 @@ class App extends Component {
         if (!this.state.matches) return <h3>Loading...</h3>
 
         const [match] = this.state.matches.filter(match => match.matchId === this.state.selectedMatchId)
+
+        if (!match) return <h4>No matches at this moment!</h4>
 
         return <div className='row'>
             <div className='col-4'>
