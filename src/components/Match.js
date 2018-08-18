@@ -169,6 +169,10 @@ export default class extends Component {
 
         if (this.state.userBet === null) return <h4>Loading...</h4>
         else {
+            if (!this.state.userBet.isBet) {
+                return <h4>Time for betting is over</h4>
+            }
+
             if (this.state.userWinAmount == null) {
                 this.updateUserWinAmount()
                 return null
