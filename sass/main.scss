@@ -3,12 +3,13 @@
 
 $color-main: #ffc107;
 $bet-width: 800px;
+$header-height: 60px;
 
 @import "_segmented_control";
 // Vendors and external stylesheets
 
 
-.header_top {background: $color-main; height: 60px; padding: 10px 50px; display: flex; align-items: center;
+.header_top {background: $color-main; height: $header-height; padding: 10px 50px; display: flex; align-items: center;
   img {
     height: auto;
     max-width: 100%;
@@ -22,6 +23,12 @@ $bet-width: 800px;
     font-size: 24px;
     color: #fff;
   }
+}
+
+.matches {
+  height: 100vh;
+  margin-top: -$header-height;
+  padding-top: $header-height;
 }
 
 .match-container {

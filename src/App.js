@@ -87,7 +87,7 @@ class App extends Component {
 
         if (!match) return <h4>No matches at this moment!</h4>
 
-        return <div className='row'>
+        return <div className='row matches'>
             <div className='col-4'>
                 <MatchList onSelect={this.selectMatch.bind(this)} matches={this.state.matches} selectedMatch={this.state.selectedMatchId}/>
             </div>
